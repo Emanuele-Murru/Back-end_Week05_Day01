@@ -1,0 +1,21 @@
+package exercise01;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+@SpringBootApplication
+public class Week05Day01Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(Week05Day01Application.class, args);
+		
+		
+		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(BeansConfig.class);
+		
+		ctx.getBean("sayHello");
+		
+		ctx.close();
+	}
+
+}

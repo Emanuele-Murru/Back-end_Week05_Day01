@@ -1,0 +1,25 @@
+package exercise01;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import lombok.extern.slf4j.Slf4j;
+
+@SpringBootApplication
+@Slf4j
+public class Week05Day01Application {
+
+	
+	public static void main(String[] args) {
+		SpringApplication.run(Week05Day01Application.class, args);
+		
+		
+		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(BeansConfiguration.class);
+		
+		log.info(ctx.getBean("sayHello"));
+		
+		ctx.close();
+	}
+
+}
