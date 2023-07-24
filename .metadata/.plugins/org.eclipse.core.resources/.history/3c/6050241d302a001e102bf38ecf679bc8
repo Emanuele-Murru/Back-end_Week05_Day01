@@ -1,0 +1,19 @@
+package entities;
+
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+import lombok.extern.slf4j.Slf4j;
+
+@Setter
+@Getter
+@Slf4j
+@ToString
+public abstract class Menu extends Product{
+	protected double calories;
+
+	public Menu(String _name, Double _price, Double _calories) {
+		super(_name, _price);
+		this.calories = _calories;
+	}	
+}

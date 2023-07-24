@@ -1,0 +1,15 @@
+package entities;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class Pizza extends Menu{
+
+	public Pizza(String name) {
+		super(name, 4.35, 1109.49);
+	}
+	
+	
+}

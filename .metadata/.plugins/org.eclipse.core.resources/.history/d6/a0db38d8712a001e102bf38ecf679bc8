@@ -1,0 +1,29 @@
+package main;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import lombok.extern.slf4j.Slf4j;
+
+@SpringBootApplication
+@Slf4j
+public class GestionalePizzeria {
+
+	
+	public static void main(String[] args) {
+		SpringApplication.run(main.GestionalePizzeria.class, args);
+		
+		
+		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(config.BeansConfiguration.class);
+		
+		log.info(ctx.getBean("sayHello").toString());
+		
+		log.info(ctx.getBean("margherita").toString());
+		log.info(ctx.getBean("coca-cola").toString());
+		log.info(ctx.getBean("l'innominabile").toString());
+		
+		ctx.close();
+	}
+
+}

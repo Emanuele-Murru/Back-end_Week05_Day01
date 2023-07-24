@@ -1,0 +1,40 @@
+package config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
+
+import entities.Consummation;
+import entities.Drink;
+import entities.Pizza;
+
+@Configuration
+
+public class BeansConfiguration {
+
+	@Bean
+	@Primary
+	String sayHello() {
+		return "Hello World!";
+	}
+
+	@Bean("margherita")
+	Pizza margherita() {
+		return new Pizza("Margherita");
+	}	
+
+	@Bean("fanta")
+	Consummation lemonade() {
+		return new Drink("Fanta (0.33L)", 1.29, 128.0);
+	}
+
+	@Bean("water")
+	Consummation water() {
+		return new Drink("Water(0,5L)", 1.29, 0.0);
+	}
+
+	@Bean("wine")
+	Consummation wine() {
+		return new Drink("Wine (0,75L, 13%", 7.49, 607.0);
+	}
+}

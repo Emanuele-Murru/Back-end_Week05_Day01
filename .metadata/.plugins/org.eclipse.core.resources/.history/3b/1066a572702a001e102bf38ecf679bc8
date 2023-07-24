@@ -1,0 +1,12 @@
+package entities;
+
+public class ExtraCheeseDecorator extends ExtrasDecorators{
+	public ExtraCheeseDecorator() {
+		super("Cheese", 0.69, 92.0);
+	}
+	
+	public ExtraCheeseDecorator(Consummation decPizza) {
+		super("Cheese", 0.69, 92.0);
+		this.decoratedPizza = pizza;
+	}
+}

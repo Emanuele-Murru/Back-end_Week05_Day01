@@ -1,0 +1,5 @@
+package gestionalePizzeria;
+
+public interface GestionalePizzeria {
+	
+}

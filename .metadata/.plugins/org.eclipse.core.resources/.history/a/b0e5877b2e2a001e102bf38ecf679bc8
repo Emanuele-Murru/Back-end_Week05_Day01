@@ -1,0 +1,11 @@
+package entities;
+
+public abstract class Prodotto {
+	String name;
+	Double price;
+	
+	public Product(String _name, Double _price) {
+		this.name = _name;
+		this.price = _price;
+	}
+}
